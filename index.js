@@ -4,11 +4,13 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
 
+const routes = require('./routes');
+
 //app setup
 app.use(morgan('combined'));
 app.use(bodyParser.json({type: '*/*'}));
 
-//nodemon runs without the script
+routes(app);
 
 //server setup
 const PORT = process.env.port || 3000;
