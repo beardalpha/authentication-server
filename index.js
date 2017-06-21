@@ -6,6 +6,10 @@ const app = express();
 
 const routes = require('./routes');
 
+// DB setup
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:auth/server-auth');
+
 //app setup
 app.use(morgan('combined'));
 app.use(bodyParser.json({type: '*/*'}));
