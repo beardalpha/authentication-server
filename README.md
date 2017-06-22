@@ -1,2 +1,2 @@
 # authentication-server
-boilerplate for server side authentication for applications
+plug and play server side authentication for applications
